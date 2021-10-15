@@ -178,7 +178,7 @@ function CuboidMaker(attrs) {
   Formula for cuboid volume: length * width * height   */
   
   CuboidMaker.prototype.volume = function(){
-    return `Volume: ${this.length * this.width * this.height}`
+    return `${this.length *this.width * this.height}`;
   };
 
 
@@ -189,7 +189,7 @@ function CuboidMaker(attrs) {
   2 * (length * width + length * height + width * height)  */
 
   CuboidMaker.prototype.surfaceArea = function(){
-    return `Surface Area: ${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+    return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
   };
 
 
@@ -213,6 +213,7 @@ console.log(cuboid.surfaceArea()); // 130
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
+
 class CuboidMakerTwo{
   constructor(attrs){
     this.length = attrs.length;
@@ -220,6 +221,12 @@ class CuboidMakerTwo{
     this.height = attrs.height;
   }
 
+}
+
+class cuboidTwo extends CuboidMakerTwo{
+  constructor(attrs){
+    super(attrs);
+  }
 }
 
 
