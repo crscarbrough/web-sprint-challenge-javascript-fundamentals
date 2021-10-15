@@ -220,6 +220,12 @@ class CuboidMakerTwo{
     this.width = attrs.width;
     this.height = attrs.height;
   }
+  volume(){
+    return this.length * this.width * this.height;
+  }
+  surfaceArea(){
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
 }
 
   class cuboidTwo extends CuboidMakerTwo{
