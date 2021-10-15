@@ -59,15 +59,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  
-
-    function animalNames(data){
-    const names = data.forEach(function(item){
-      return `name: ${this.animal_name}, scientific: ${this.scientific_name}`;
-    })
-      return names;
+  function animalNames(data){
+    const displayNames = [];
+    zooAnimals.forEach(function(item){
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+      });
+      return displayNames;
     }
-
+      
+      console.log(animalNames(zooAnimals));
 
 
 
@@ -198,8 +198,11 @@ function CuboidMaker(attrs) {
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
-  
-
+class Cuboid extends CuboidMaker{
+  constructor(length, width, height){
+    super(length, width, height);
+  }
+}
 
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
