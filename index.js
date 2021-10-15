@@ -178,7 +178,7 @@ function CuboidMaker(attrs) {
   Formula for cuboid volume: length * width * height   */
   
   CuboidMaker.prototype.volume = function(){
-    return `${this.length *this.width * this.height}`;
+    return this.length * this.width * this.height;
   };
 
 
@@ -189,7 +189,7 @@ function CuboidMaker(attrs) {
   2 * (length * width + length * height + width * height)  */
 
   CuboidMaker.prototype.surfaceArea = function(){
-    return `${2 * (this.length * this.width + this.length * this.height + this.width * this.height)}`;
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   };
 
 
@@ -220,14 +220,13 @@ class CuboidMakerTwo{
     this.width = attrs.width;
     this.height = attrs.height;
   }
-
 }
 
-class cuboidTwo extends CuboidMakerTwo{
+  class cuboidTwo extends CuboidMakerTwo{
   constructor(attrs){
     super(attrs);
   }
-}
+  }
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
